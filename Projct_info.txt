@@ -22,5 +22,6 @@ git config --global user.email "email@example.com"
 git checkout master
 ## to merge the branches
 git merge test
+git push
 
 git log --graph
