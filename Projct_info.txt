@@ -4,10 +4,30 @@ Git commands
 --------------------------------
 
 git clone https clone url
+
+# For adding sperate files name wise
+git add my-file.ts another-file.js new_file.rb
+
+# For adding files from only root dirctory
+git add .
+
+# For adding files from all sub directories
 git add -A
+Or
+git add --all
+
 git commit -m "new file added"
 git push
 git pull
+git status
+
+
+git command to remove files >>
+git rm --cached my-file.txt
+Or
+git reset my-file.txt
+
+## "reset" command is the opposite of "add" command.
 
 
 git command to update email address for cmd commits >>
@@ -25,3 +45,14 @@ git merge test
 git push
 
 git log --graph
+
+
+## you can undo the commit>>
+git reset --soft HEAD^
+HEAD is just a pointer to a branch either master branch or other
+We can read "git reset --soft HEAD^" as "Undo the last commit in the current branch and move HEAD back by one commit."
+
+git add file-i-forgot-to-add.html
+git commit --amend -m "Add the remaining file"
+
+The "--amend" option lets you amend the last commit by adding a new file (or multiple files). Using the "--amend" option, you can also overwrite the message of your last commit
